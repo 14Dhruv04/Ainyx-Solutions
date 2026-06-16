@@ -31,9 +31,7 @@ func main() {
 	queries := sqlc.New(db)
 
 	repo := repository.NewUserRepository(queries)
-
 	userService := service.NewUserService(repo)
-
 	userHandler := handler.NewUserHandler(userService)
 
 	app := fiber.New()
