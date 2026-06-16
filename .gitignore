@@ -1,0 +1,12 @@
+# Environment variables
+.env
+
+# IDE files
+.vscode/
+.idea/
+
+# Build output
+*.exe
+*.out
+
+.DS_Store
