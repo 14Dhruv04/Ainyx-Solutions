@@ -10,6 +10,7 @@ import (
 	"ainyx/internal/repository"
 	"ainyx/internal/routes"
 	"ainyx/internal/service"
+	"ainyx/internal/middleware"
 
 	"github.com/gofiber/fiber/v2"
 )
@@ -36,6 +37,8 @@ func main() {
 	userHandler := handler.NewUserHandler(userService)
 
 	app := fiber.New()
+
+	app.Use(middleware.RequestLogger)
 
 	routes.RegisterRoutes(app, userHandler)
 
