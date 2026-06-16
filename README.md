@@ -54,7 +54,7 @@ cd Ainyx-Solutions
 
 Update the database connection string
 ```
-$env:DB_URL=postgres://postgres:PASSWORD@localhost:5432/userdb?sslmode=disable
+$env:DB_URL=postgres://postgres:<YOUR_PASSWORD>@localhost:5432/userdb?sslmode=disable
 ```
 
 Generate SQLC Code
